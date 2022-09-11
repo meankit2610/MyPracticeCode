@@ -1,7 +1,8 @@
 #Deployed Link
 [https://text-converte-analyzer.netlify.app/]
 
-<img src="https://drive.google.com/file/d/1Hh0q60cN9Wz9IxyXEAcyqQvv0C5nGObP/view?usp=sharing">
+![2022-09-12](https://user-images.githubusercontent.com/87632087/189545914-923336f9-8a51-4f66-b732-0902dafea98d.png)
+
 
 # Getting Started with Create React App
 
