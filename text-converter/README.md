@@ -1,3 +1,9 @@
+#Deployed Link
+[https://text-converte-analyzer.netlify.app/]
+
+![2022-09-12](https://user-images.githubusercontent.com/87632087/189545914-923336f9-8a51-4f66-b732-0902dafea98d.png)
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
