@@ -1,8 +1,8 @@
 import React from 'react'
 import { useState } from 'react';
 
-export default function TextForm() {
-  const [text, setText] = useState("Enter Text")
+export default function TextForm(prop) {
+  const [text, setText] = useState("")
   const [min, setMin] = useState(true)
   
   const handleTime = () => {
@@ -22,23 +22,63 @@ export default function TextForm() {
         console.log("change");
         setText(e.target.value)
     }
+    const handleExtraSpace  = () => {
+      let newText = text.split(/[ ]+/);
+      setText(newText.join(" "));
+    };
+    const handleCopy = () => {
+      let text = document.getElementById("exampleFormControlTextarea1");
+      text.select();
+      navigator.clipboard.writeText(text.value);
+    };
   return (
     <>
-      <h1>Enter The Text Analyze</h1>
-      <div className="container">
+      <div
+        className="container"
+        style={{ color: prop.mode === `light` ? `black` : `white` }}
+      >
+        <h1>Enter The Text Analyze</h1>
         <textarea
+          style={{
+            backgroundColor: prop.mode === "dark" ? "grey" : "white",
+            color: prop.mode === `light` ? `black` : `white`,
+          }}
           className="form-control"
           id="exampleFormControlTextarea1"
           rows="8"
           value={text}
           onChange={handleChange}
         ></textarea>
-        <button class="btn btn-primary mx-2" type="submit" onClick={handleUp}>
-          Convert To UpperCase
-        </button>
-        <button class="btn btn-primary mx-2" type="submit" onClick={handleLow}>
-          Convert To LowerCase
-        </button>
+        <div className="container ">
+          <button
+            className="btn btn-primary mx-2 my-2"
+            type="submit"
+            onClick={handleUp}
+          >
+            Convert To UpperCase
+          </button>
+          <button
+            className="btn btn-primary mx-2 my-2"
+            type="submit"
+            onClick={handleLow}
+          >
+            Convert To LowerCase
+          </button>
+          <button
+            className="btn btn-primary mx-2 my-2"
+            type="submit"
+            onClick={handleCopy}
+          >
+            Copy Text
+          </button>
+          <button
+            className="btn btn-primary mx-2 my-2"
+            type="submit"
+            onClick={handleExtraSpace}
+          >
+            Remove Extra Space
+          </button>
+        </div>
 
         <div className="conatiner2">
           <h2>Your Text Summary</h2>
@@ -52,7 +92,7 @@ export default function TextForm() {
                 Minutes
               </p>
               <button
-                class="btn btn-primary mx-2"
+                className="btn btn-primary mx-2"
                 type="submit"
                 onClick={handleTime}
               >
@@ -66,7 +106,7 @@ export default function TextForm() {
                 Seconds
               </p>
               <button
-                class="btn btn-primary mx-2"
+                className="btn btn-primary mx-2"
                 type="submit"
                 onClick={handleTime}
               >
@@ -76,7 +116,7 @@ export default function TextForm() {
           )}
 
           <h2>Preview</h2>
-          <p>{text}</p>
+          <p>{text ? text : "Enter Something In the Box To Preview"}</p>
         </div>
       </div>
     </>
