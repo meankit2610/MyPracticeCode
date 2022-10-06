@@ -1,0 +1,11 @@
+Q1) What is React?
+Ans-1) i)  React is a Javascript library 
+       ii) React is an Open-Source project created by Facebook
+       iii)React is used to build user interfaces on the front end.
+
+Q2) Who Made React?
+Ans-2) React was created by Jordan Walke.
+
+Q3) What is Babel?
+Ans-3) Babel is toolchain that is mainly used to convert ECMAScript 2015+ code into a backwards compatible version of Javascript
+in current and older browsers or environments.
