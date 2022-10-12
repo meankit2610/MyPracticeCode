@@ -11,12 +11,14 @@ export default function TextForm(prop) {
     const handleUp = () => {
         
         let newText = text.toUpperCase()
-        setText(newText)
+      setText(newText)
+      prop.showAlert("Converted To UpperCase", "success");
     }
     const handleLow = () => {
         
         let newText = text.toLowerCase()
-        setText(newText)
+      setText(newText)
+      prop.showAlert("Converted To LowerCase", "success");
     }
     const handleChange = (e) => {
         console.log("change");
@@ -25,11 +27,13 @@ export default function TextForm(prop) {
     const handleExtraSpace  = () => {
       let newText = text.split(/[ ]+/);
       setText(newText.join(" "));
+      prop.showAlert("Extra Spaces Removed", "success");
     };
     const handleCopy = () => {
       let text = document.getElementById("exampleFormControlTextarea1");
       text.select();
       navigator.clipboard.writeText(text.value);
+      prop.showAlert("Text Copied To Clipboard", "success");
     };
   return (
     <>
