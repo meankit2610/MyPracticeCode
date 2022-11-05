@@ -1,6 +1,6 @@
-import { makeStyles } from 'tss-react/mui';
+import { makeStyles } from 'tss-react/mui' ;
 
-export default makeStyles({
+ const useStyles = makeStyles (()=>({
   media: {
     height: 0,
     paddingTop: '56.25%',
@@ -49,4 +49,6 @@ export default makeStyles({
     display: 'flex',
     justifyContent: 'space-between',
   },
-});
+}));
+
+export default useStyles

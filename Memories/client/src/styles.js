@@ -1,7 +1,7 @@
-// import { makeStyles } from '@mui/material'
 import { makeStyles } from 'tss-react/mui'
 
-export default makeStyles(() => ({
+
+   const useStyles = makeStyles (()=>({
      appBar: {
     borderRadius: 15,
     margin: '30px 0',
@@ -18,3 +18,4 @@ export default makeStyles(() => ({
   },
 }));
 
+export default useStyles

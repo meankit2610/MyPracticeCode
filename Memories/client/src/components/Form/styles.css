@@ -1,0 +1,33 @@
+/* .root {
+    
+        margin: spacing(1);
+    
+
+    
+} */
+
+
+.paper {
+    padding: spacing(10);
+}
+
+
+.form {
+    display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+}
+
+
+.fileInput {
+    width: 97%;
+        margin: 10px 0;
+}
+
+
+.buttonSubmit {
+    margin-bottom: 10px;
+    display: block;
+    margin: 1px;
+}
+
