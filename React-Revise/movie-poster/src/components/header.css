@@ -1,0 +1,10 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+.heading {
+    color: white;
+    display: flex;
+    background-color: rgb(78, 30, 210);
+    justify-content: center;
+}
