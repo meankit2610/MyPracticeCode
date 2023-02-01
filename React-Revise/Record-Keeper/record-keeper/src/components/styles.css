@@ -1,0 +1,16 @@
+*{
+    margin: 0;
+}
+
+.header{
+    padding: 10px;
+    background-color: rgb(71, 71, 171);
+    color: white;
+}
+
+.input-space{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 15px;
+}
