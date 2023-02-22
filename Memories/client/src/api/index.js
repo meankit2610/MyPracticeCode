@@ -1,6 +1,7 @@
 import axios from 'axios'
 
-const url = 'https://memories-crud-project.herokuapp.com/posts';
+// const url = 'https://memories-crud-project.herokuapp.com/posts';
+const url = "https://wicked-hoodie-dog.cyclic.app/posts";
 
 export const fetchPosts = () => axios.get(url);
 export const createPost = (newPost) => axios.post(url, newPost);
